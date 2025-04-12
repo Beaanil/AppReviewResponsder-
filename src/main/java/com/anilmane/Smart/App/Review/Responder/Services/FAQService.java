@@ -103,7 +103,7 @@ public class FAQService {
 
 
     public List<FAQ> getReleventFAQs(String queryVector, int limit) {
-        var client = MongoClients.create("mongodb+srv://avman9165:Anil1234@cluster0.9vlnqw6.mongodb.net/smart-review-db?retryWrites=true&w=majority&appName=Cluster0");
+        var client = MongoClients.create("mongodb+srv://<username>:<password>@cluster0.9vlnqw6.mongodb.net/<database name>?retryWrites=true&w=majority&appName=Cluster0");
         MongoDatabase database = client.getDatabase("smart-review-db");
         MongoCollection<Document> collection = database.getCollection("faqs");
 
