@@ -103,7 +103,7 @@ public class FAQService {
 
 
     public List<FAQ> getReleventFAQs(String queryVector, int limit) {
-        var client = MongoClients.create("mongodb+srv://<username>:<password>@cluster0.9vlnqw6.mongodb.net/<database name>?retryWrites=true&w=majority&appName=Cluster0");
+        var client = MongoClients.create();  // add your mongo atlas url here
         MongoDatabase database = client.getDatabase("smart-review-db");
         MongoCollection<Document> collection = database.getCollection("faqs");
 
